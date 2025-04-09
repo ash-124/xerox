@@ -22,4 +22,6 @@
     --font-futura-semi-bold: futuraP5, "sans-serif";
     --font-galano-bold: galanoBold, "sans-serif";
   }
-
+.navbar-icon{
+  @apply btn btn-ghost btn-circle text-xl;
+}
