@@ -1,0 +1,21 @@
+@font-face {
+  font-family: futura;
+  src: url("../src/assets/fonts/futura_normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: futuraP5;
+  src: url("../src/assets/fonts/futura_semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family:galanoBold ;
+  src: url("../src/assets/fonts/GalanoBold.otf") format("otf");
+}
+@import "tailwindcss";
+@plugin "daisyui";
+@config "../tailwind.config.js"
+
+@theme {
+  --font-futura-normal: futura, "sans-serif";
+  --font-futura-semi-bold: futuraP5, "sans-serif";
+  --font-galano-bold: galanoBold, "sans-serif";
+}
