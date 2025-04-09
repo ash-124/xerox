@@ -9,6 +9,9 @@ const Home = () => {
             <p>
                 {vida}
             </p>
+            <p className='font-futura-normal'>this futura normal </p>
+            <p className='font-futura-semi-bold'> this is futura semibold</p>
+            <p className='font-galano-bold'> this is galano bold</p>
         </div>
     );
 };
