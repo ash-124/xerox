@@ -1,9 +1,13 @@
-import SliderBanner from "../components/Home/SliderBanner";
+import ProductView from "../components/Home/CenteredProductView/ProductView";
+import SliderBanner from "../components/Home/sliderBanner/SliderBanner";
+
 
 const Home = () => {
     return (
-        <div className="h-screen">
+        <div className="min-h-screen">
             <SliderBanner/>
+            <ProductView/>
+
         </div>
     );
 };

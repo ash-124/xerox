@@ -8,13 +8,19 @@ import Navbar from "../components/Navbar"
 function App() {
 
   return (
-    <div className="flex flex-col min-h-screen font-futura-normal">
-      <Navbar/>
-      <div className="grow">
-        <Outlet/>
+    <div className="flex min-h-screen flex-col font-futura-normal ">
+      {/* Navbar */}
+      <div >
+        <Navbar />
       </div>
-      <Footer/>
+      {/* Dynamic Contents */}
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+      {/* Footer */}
+      <Footer />
     </div>
+
   )
 }
 
