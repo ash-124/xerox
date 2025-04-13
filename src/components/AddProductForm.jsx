@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
+import Swal from 'sweetalert2'
+
 
 const AddProductForm = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -8,7 +10,7 @@ const AddProductForm = () => {
 
 
 
-    const onSubmit = async(data) => {
+    const onSubmit = async (data) => {
         // Split and trim the color values
         const names = data.colorNames.split(",").map(name => name.trim());
         const hexes = data.hexCodes.split(",").map(hex => hex.trim());
@@ -27,14 +29,33 @@ const AddProductForm = () => {
             createdAt: new Date().toISOString(),
         };
         try {
-            const {data:products} = await axios.post(`${import.meta.env.VITE_API_URL}/products`,{product:finalData})
-            console.log(products)
+            Swal.fire({
+                title: "Are you sure to add Product?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, add it!"
+              }).then(async(result) => {
+                if (result.isConfirmed) {
+                    const { data: products } = await axios.post(`${import.meta.env.VITE_API_URL}/products`, { product: finalData })
+                    console.log("sent request",products)
+                    if(products.insertedId){
+                        Swal.fire({
+                            title: "Added!",
+                            text: "Your product has been Added.",
+                            icon: "success"
+                          });
+                    }        
+                }
+              });
             
         } catch (error) {
             console.log(error)
         }
         setSubmittedData(finalData)
-        
+
         console.log("Final formatted data:", finalData);
         reset();
     };

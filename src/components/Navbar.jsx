@@ -6,7 +6,15 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
     const { pathname } = useLocation();
     console.log('location', pathname)
+    const links =
+        <>
 
+            <li><Link to={'/'}>Home</Link></li>
+            <li><Link to={'/add-product'}>Add Product</Link></li>
+            <li><Link to={'/all-products'}>All Products</Link></li>
+            <li><Link to={'/add-product'}>Add Product</Link></li>
+
+        </>
     return (
         <div className={`navbar ${pathname === '/' ? "text-white absolute z-[200] top-0 bg-transparent" : "text-black bg-white"}   h-[85px]  px-10`}>
             <div className="navbar-start">
@@ -16,10 +24,8 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Homepage</a></li>
-                        <li><a>Portfolio</a></li>
-                        <Link to={'/add-product'}>Add Product</Link>
+                        className="menu menu-sm dropdown-content bg-slate-100 text-black rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        {links}
                     </ul>
                 </div>
                 <div className="navbar-icon"><FaSearch /></div>
