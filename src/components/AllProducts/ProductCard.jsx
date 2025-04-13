@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
         : 0;
 
     return (
-        <div className="border rounded-md overflow-hidden shadow-sm relative group">
+        <div className="border h-[335px]  overflow-hidden shadow-sm relative group">
             {/* Discount Badge */}
             {isDiscounted && (
                 <div className="absolute top-2 left-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 z-10">

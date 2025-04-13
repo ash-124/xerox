@@ -21,7 +21,7 @@
   object-fit: cover;
 }
 /* Wider and custom-colored bullets */
-.swiper-pagination-bullet {
+.mySwiper .swiper-pagination-bullet {
   width: 50px;
   height: 6px;
   border-radius: 4px;

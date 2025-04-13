@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
-import sliderImg1 from "../../../assets/sliderBanner1.webp"
-import sliderImg2 from "../../../assets/sliderBanner2.jpg"
+import { useRef } from 'react';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,7 +13,7 @@ import './swiper.css';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 // make progress bar straight without any number count and pagination button flat
-function SliderBanner() {
+function SliderBanner({sliderImg1, sliderImg2}) {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
@@ -24,10 +23,10 @@ function SliderBanner() {
   return (
     <>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={10}
         centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{
