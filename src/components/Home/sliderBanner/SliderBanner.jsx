@@ -16,10 +16,10 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 function SliderBanner({sliderImg1, sliderImg2}) {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
-    progressContent.current.textContent = ``;
-  };
+  // const onAutoplayTimeLeft = (s, time, progress) => {
+  //   progressCircle.current.style.setProperty('--progress', 1 - progress);
+  //   progressContent.current.textContent = ``;
+  // };
   return (
     <>
       <Swiper
@@ -35,7 +35,7 @@ function SliderBanner({sliderImg1, sliderImg2}) {
         }}
 
         modules={[Autoplay, Pagination, Navigation]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
+        // onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
         <SwiperSlide>

@@ -25,13 +25,13 @@
   width: 50px;
   height: 6px;
   border-radius: 4px;
-  background: #ccc; /* Inactive bullet color */
+  background: #cccccc74; /* Inactive bullet color */
   opacity: 1;
   transition: background 0.3s ease;
 }
 
-.swiper-pagination-bullet-active {
-  background: white; /* Active bullet color */
+.mySwiper .swiper-pagination-bullet-active {
+  background: rgb(255, 255, 255); /* Active bullet color */
 }
 
 .autoplay-progress {

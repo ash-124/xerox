@@ -12,7 +12,7 @@ import { Pagination } from 'swiper/modules';
 // TO:DO thinks are getting overflow fixed that 
 export default function ProductView() {
   return (
-    <div className=' mt-10'>
+    <div className=' mt-10 '>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}

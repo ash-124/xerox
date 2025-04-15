@@ -16,7 +16,7 @@ const Navbar = () => {
 
         </>
     return (
-        <div className={`navbar ${pathname === '/' ? "text-white absolute z-[200] top-0 bg-transparent" : "text-black bg-white"}   h-[85px]  px-10`}>
+        <div className={`navbar container mx-auto ${pathname === '/' ? "text-white absolute z-[200] top-0 bg-transparent" : "text-black bg-white"} `}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="navbar-icon">
